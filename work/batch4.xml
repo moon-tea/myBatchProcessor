@@ -1,0 +1,8 @@
+<batch>
+	<wd id='swd1' path="work" />
+	<file id="file1" path="numberdata.txt" />
+	<cmd id="addLines" path="java.exe" args="-jar addLines.jar" in='file1' out='pipe' />
+	<file id="file2" path="avgout1.txt" />
+	<cmd id="avgFile" path="java.exe" args="-jar avgFile.jar" in="pipe" out='file2' />
+	<pipe id='pipe1' cmd1='addLines' cmd2='avgFile' />
+</batch>
